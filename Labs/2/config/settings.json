@@ -1,0 +1,7 @@
+{
+  "mongoConfig": {
+    "serverUrl": "mongodb://localhost:27017/",
+    "database": "Breslin_Aughdon_CS554_Lab2"
+  }
+}
+
