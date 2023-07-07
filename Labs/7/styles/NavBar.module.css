@@ -1,0 +1,22 @@
+.nav {
+	background-color: green;
+	position: sticky;
+	height: 40px;
+	display: flex;
+	align-items:center;
+	box-shadow: 0 1px 1px 0 black;
+}
+
+.navlink {
+	display: block;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+	box-shadow: 0 0px 0px 0;
+}
+
+.navlink:hover {
+	background-color:#00b800;
+	color: white;
+	border: 1px solid white;
+}

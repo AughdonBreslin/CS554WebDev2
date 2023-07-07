@@ -64,7 +64,7 @@ const checkString = function checkString(strVal, minLength = 0, maxLength = Infi
   return strVal;
 }
 
-const checkArray = function checkArray(array, elemType, arrName, minArrayLength, maxArrayLength, minElemLength, maxElemLength) {
+const checkArray = function checkArray(array, elemType, arrName, minArrayLength = 0, maxArrayLength = Infinity, minElemLength = 0, maxElemLength = Infinity) {
   if(!Array.isArray(array)) throw `Error: ${arrName} must be an array.`;
   if(array.length < minArrayLength || array.length > maxArrayLength) throw `Error: ${arrName} must have length within [${minArrayLength}, ${maxArrayLength}].`;
   for (const elem of array) {
@@ -77,6 +77,7 @@ const checkArray = function checkArray(array, elemType, arrName, minArrayLength,
       }
   }
 };
+
 const checkStringArray = function checkStringArray(array, elemType, arrName, minArrayLength, maxArrayLength, minElemLength, maxElemLength, alpha, numeric, spacesOk, specialCharOk) {
   if(!Array.isArray(array)) throw `Error: ${arrName} must be an array.`;
   if(array.length < minArrayLength || array.length > maxArrayLength) throw `Error: ${arrName} must have length within [${minArrayLength}, ${maxArrayLength}].`;
@@ -102,6 +103,7 @@ const checkId = function checkId(id, varName) {
   
   return id;
 };
+
 const checkPassword = function checkPassword(password) {
   if(password.length < 6) throw `Error: Password must be at least 6 characters.`;
   // https://www.geeksforgeeks.org/check-if-a-string-contains-uppercase-lowercase-special-characters-and-numeric-values/#:~:text=Traverse%20the%20string%20character%20by,it%20is%20a%20lowercase%20letter.

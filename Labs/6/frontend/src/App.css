@@ -1,0 +1,310 @@
+:root {
+  --animation-time: 5s;
+  animation-delay: 0s;
+}
+
+/* The annoying one */
+.funky {
+  position: relative;
+  animation: colorRotate  var(--animation-time) linear 0s infinite;
+}
+
+/* Dangerous addition */
+@keyframes colorRotate {
+  from {
+    /* background-color: #FF0000; */
+    color:#8B00FF;
+    left:0px;
+    top:0px;
+    border-color: #8B00FF;
+    transform: rotate(0deg);
+  }
+  14% {
+    /* background-color: #FF7F00; */
+    color:#2E2B5F;
+    left:1px;
+    top:3px;
+    border-color: #2E2B5F;
+    transform: rotate(51deg);
+  }
+  28% {
+    /* background-color: #FFFF00; */
+    color: #0000FF;
+    left:3px;
+    top:5px;
+    border-color: #0000FF;
+    transform: rotate(103deg);
+  }
+  43% {
+    /* background-color: #00FF00; */
+    color: #00FF00;
+    left:5px;
+    top:7px;
+    border-color: #00FF00;
+    transform: rotate(154deg);
+  }
+  57% {
+    /* background-color: #0000FF; */
+    color: #FFFF00;
+    left:7px;
+    top:5px;
+    border-color: #FFFF00;
+    transform: rotate(205deg);
+  }
+  72% {
+    /* background-color: #2E2B5F; */
+    color: #FF7F00;
+    left:5px;
+    top:3px;
+    border-color: #FF7F00;
+    transform: rotate(257deg);
+  }
+  86% {
+    /* background-color: #8B00FF; */
+    color: #FF0000;
+    left:3px;
+    top:1px;
+    border-color: #FF0000;
+    transform: rotate(308deg);
+  }
+  100% {
+    /* background-color: #FF0000; */
+    color:#8B00FF;
+    left:0px;
+    top:0px;
+    border-color: #8B00FF;
+    transform: rotate(360deg);
+  }
+}
+
+nav {
+	background-color: green;
+	position: sticky;
+	height: 40px;
+	display: flex;
+	align-items:center;
+	box-shadow: 0 1px 1px 0 black;
+}
+
+.navlink {
+	display: block;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+	box-shadow: 0 0px 0px 0;
+}
+
+.navlink:hover {
+	background-color:#00b800;
+	color: white;
+	border: 1px solid white;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0px 0px 0;
+  padding: 5px;
+}
+
+.page-button {
+  background-color: green;
+  color: white;
+  padding: 5px 8px;
+  text-decoration: none;
+  box-shadow: 0 0px 0px 0;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.page-button:active {
+  background-color: #00b800;
+  color: white;
+  border: 1px solid white;
+}
+
+.card {
+  background-color: #282c34;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0px 0px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+}
+
+.card:hover {
+  background-color: #00b800;
+  color: white;
+  border: 1px solid white;
+}
+
+.card-page {
+  background-color: #282c34;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0px 0px 0;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.card-text {
+  font-size: 1.2em;
+  color: white;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.card-list li {
+  list-style-type: none;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0px 0px 0;
+
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  padding: 5px 8px;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.card-button:active {
+  background-color: #00b800;
+  color: white;
+  border: 1px solid white;
+}
+
+.card-button:hover {
+  background-color: #00b800;
+  color: white;
+  border: 1px solid white;
+}
+
+.collector-table {
+  background-color: #282c34;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 0.9em;
+  overflow: hidden;
+  box-shadow: 0 0px 0px 0;
+}
+
+.collector-table tbody{
+  display: block;
+  overflow: auto;  
+}
+
+.collector-table tr {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.collector-table td {
+  background-color: #282c34;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  text-align: left;
+}
+
+.collector-link {
+  color: white;
+  text-decoration: none;
+  padding: 5px
+}
+
+.collector-link:hover {
+  color: white;
+  text-decoration: underline;
+  padding: 6px;
+}
+
+.collector-form {
+  background-color: #282c34;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 0.9em;
+  overflow: hidden;
+  box-shadow: 0 0px 0px 0;
+}
+
+.collector-form label {
+  display: block;
+  margin: 5px;
+}
+
+.collector-form input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5px;
+}
+
+.collector-button {
+  background-color: green;
+  color: white;
+  padding: 5px 8px;
+  text-decoration: none;
+  box-shadow: 0 0px 0px 0;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.collector-button:active {
+  background-color: #00b800;
+  color: white;
+  border: 1px solid white;
+}
+
+.collector-button:hover {
+  background-color: #00b800;
+  color: white;
+  border: 1px solid white;
+}
+
+.funky {
+
+}
